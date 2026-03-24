@@ -1,0 +1,39 @@
+
+CSET419 - Lab 8: Neural Art with GANs (FAST VERSION)
+=====================================================
+Completed: 2026-03-17 04:15:22
+
+MODELS USED:
+1. BASIC GAN: Fast DCGAN (Lightweight, trained in ~5 mins)
+   - Architecture: 5-layer ConvTranspose Generator
+   - Training: 15 epochs with optimized hyperparameters
+   - Features: Dropout for stability, higher LR (0.0004)
+
+2. ADVANCED GAN: StyleGAN2-ADA (Pre-trained, no training time)
+   - Source: NVIDIA Official Pre-trained CIFAR-10
+   - Features: Mapping network, AdaIN, style mixing
+   - Instant generation with high quality
+
+LATENT SPACE EXPLORATION:
+✓ 10 Random artistic samples from each model
+✓ Linear interpolation (smooth transitions)
+✓ Spherical interpolation (constant velocity)
+✓ Latent vector arithmetic demonstrations
+
+FILES GENERATED (All in Google Drive):
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//dcgan_fast/          : 10 artistic samples + grid
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//stylegan_pretrained/ : 10 StyleGAN samples (if downloaded)
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//interpolations/      : Smooth transition frames
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//models/              : Trained Fast DCGAN weights
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//training_samples.png : Real CIFAR-10 data
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//loss_curve.png       : Training progress
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//final_comparison.png : Side-by-side comparison
+- /content/drive/MyDrive/Colab Notebooks/GenAI/Lab 8//lab_report.txt       : This report
+
+OBSERVATIONS:
+- Fast DCGAN converges quickly with good artistic quality
+- StyleGAN2 produces higher fidelity images instantly
+- Latent interpolations show smooth semantic transitions
+- Different latent vectors produce diverse, non-repetitive outputs
+
+Total execution time: ~10 minutes (vs hours for standard training)
